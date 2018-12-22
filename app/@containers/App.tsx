@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { PureComponent, ReactNode } from 'react'
 
 export default class App extends PureComponent<{}> {
   public render(): ReactNode {

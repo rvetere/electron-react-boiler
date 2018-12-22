@@ -1,3 +1,5 @@
+import { Dispatch, Store } from 'redux'
+
 export interface ICounterStateType {
   counter: number
 }
@@ -8,6 +10,6 @@ export interface IAction {
 
 export type GetState = () => ICounterStateType
 
-export type Dispatch = ReduxDispatch<IAction>
+export type IDispatch = Dispatch<IAction>
 
-export type Store = ReduxStore<GetState, IAction>
+export type IStore = Store<GetState, IAction>

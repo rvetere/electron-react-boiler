@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "visualstudioexptteam.vscodeintellicode",
+    "orta.vscode-jest",
+    "esbenp.prettier-vscode",
+    "eg2.tslint",
+    "shinnn.stylelint",
+    "robertohuertasm.vscode-icons"
+  ]
+}

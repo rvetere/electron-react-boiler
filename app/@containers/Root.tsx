@@ -1,6 +1,7 @@
 import { ConnectedRouter } from 'connected-react-router'
-import React, { Component } from 'react'
+import React, { Component, ReactNode } from 'react'
 import { Provider } from 'react-redux'
+import { Store } from 'redux'
 import Routes from '../Routes'
 
 export interface IRootProps {
