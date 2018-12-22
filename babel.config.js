@@ -1,8 +1,8 @@
 /* eslint global-require: off */
 
-const developmentEnvironments = ['development', 'test'];
+const developmentEnvironments = ['development', 'test']
 
-const developmentPlugins = [require('react-hot-loader/babel')];
+const developmentPlugins = [require('react-hot-loader/babel')]
 
 const productionPlugins = [
   require('babel-plugin-dev-expression'),
@@ -11,12 +11,12 @@ const productionPlugins = [
   require('@babel/plugin-transform-react-constant-elements'),
   require('@babel/plugin-transform-react-inline-elements'),
   require('babel-plugin-transform-react-remove-prop-types')
-];
+]
 
 module.exports = api => {
   // see docs about api at https://babeljs.io/docs/en/config-files#apicache
 
-  const development = api.env(developmentEnvironments);
+  const development = api.env(developmentEnvironments)
 
   return {
     presets: [
@@ -27,7 +27,7 @@ module.exports = api => {
           useBuiltIns: 'usage'
         }
       ],
-      require('@babel/preset-flow'),
+      require('@babel/preset-typescript'),
       [require('@babel/preset-react'), { development }]
     ],
     plugins: [
@@ -38,14 +38,8 @@ module.exports = api => {
       require('@babel/plugin-proposal-export-default-from'),
       require('@babel/plugin-proposal-logical-assignment-operators'),
       [require('@babel/plugin-proposal-optional-chaining'), { loose: false }],
-      [
-        require('@babel/plugin-proposal-pipeline-operator'),
-        { proposal: 'minimal' }
-      ],
-      [
-        require('@babel/plugin-proposal-nullish-coalescing-operator'),
-        { loose: false }
-      ],
+      [require('@babel/plugin-proposal-pipeline-operator'), { proposal: 'minimal' }],
+      [require('@babel/plugin-proposal-nullish-coalescing-operator'), { loose: false }],
       require('@babel/plugin-proposal-do-expressions'),
 
       // Stage 2
@@ -58,10 +52,32 @@ module.exports = api => {
       // Stage 3
       require('@babel/plugin-syntax-dynamic-import'),
       require('@babel/plugin-syntax-import-meta'),
+      require('@babel/plugin-proposal-object-rest-spread'),
       [require('@babel/plugin-proposal-class-properties'), { loose: true }],
       require('@babel/plugin-proposal-json-strings'),
 
+      [
+        require('babel-plugin-module-resolver'),
+        {
+          root: ['.'],
+          cwd: 'babelrc',
+          alias: {
+            '@config': './app/lib/@config',
+            '@constants': './app/@constants',
+            '@core': './app/@components/@core',
+            '@containers': './app/@components/@containers',
+            '@components': './app/@components',
+            '@actions': './app/@actions',
+            '@reducers': './app/@reducers',
+            '@store': './app/@store',
+            '@decorators': './app/lib/@decorators',
+            '@helpers': './app/lib/@helpers',
+            '@postcss': './app/lib/@postcss'
+          }
+        }
+      ],
+
       ...(development ? developmentPlugins : productionPlugins)
     ]
-  };
-};
+  }
+}

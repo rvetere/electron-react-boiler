@@ -1,0 +1,30 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "member-access": true,
+    "no-any": true,
+    "object-literal-sort-keys": false,
+    "strict-type-predicates": true,
+    "prefer-const": false,
+    "no-submodule-imports": false,
+    "prefer-for-of": false,
+    "no-namespace": false,
+    "no-implicit-dependencies": false,
+    "prefer-conditional-expression": false,
+    "no-conditional-assignment": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "typedef": [
+      true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "member-variable-declaration",
+      "array-destructuring"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts", "**/__mocks__/**/*", "**/*.js"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": false,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": ["./app/lib/@config/*"],
+      "@constants/*": ["./app/@constants/*"],
+      "@core/*": ["./app/@components/@core/*"],
+      "@core": ["./app/@components/@core"],
+      "@components/*": ["./app/@components/*"],
+      "@containers/*": ["./app/@containers/*"],
+      "@actions/*": ["./app/@actions/*"],
+      "@reducers/*": ["./app/@reducers/*"],
+      "@store/*": ["./app/@store/*"],
+      "@decorators/*": ["./app/lib/@decorators/*"],
+      "@helpers/*": ["./app/lib/@helpers/*"],
+      "@postcss/*": ["./app/lib/@postcss/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["dom", "es2015", "es2016", "es2017", "esnext.asynciterable"],
+    "plugins": [{ "name": "tslint-language-service" }]
+  },
+  "exclude": ["node_modules", "**/node_modules/*", "**/*.test.(ts|tsx)"]
+}

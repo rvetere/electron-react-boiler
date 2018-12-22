@@ -1,0 +1,209 @@
+.containerFluid {
+  position: relative;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointMdMin) {
+    max-width: 940px;
+  }
+
+  @media (min-width: $breakpointLgMin) {
+    max-width: 1195px;
+  }
+
+  @media (min-width: $breakpointXlMin) {
+    max-width: 1355px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$spacingBase;
+  margin-left: -$spacingBase;
+
+  @media (min-width: $breakpointMdMin) {
+    margin-right: -$spacingBig;
+    margin-left: -$spacingBig;
+  }
+}
+
+.noGutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.noGutters > [class*='col'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@mixin gridColClasses $spacingBase;
+
+.col {
+  -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+  flex-basis: 0;
+  -webkit-box-flex: 1; /* stylelint-disable-line */
+  -ms-flex-positive: 1; /* stylelint-disable-line */
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col1,
+.colAuto {
+  -webkit-box-flex: 0; /* stylelint-disable-line */
+}
+
+.colAuto {
+  -webkit-box-flex: 0; /* stylelint-disable-line */
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+@for $i from 1 to 12 {
+  .col$(i) {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 makeCol($(i), 12);
+    max-width: makeCol($(i), 12);
+  }
+}
+
+@media (min-width: $breakpointXsMin) {
+  @mixin gridColClassesPadding $spacingBase;
+
+  .colXs {
+    -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+    flex-basis: 0;
+    -webkit-box-flex: 1; /* stylelint-disable-line */
+    -ms-flex-positive: 1; /* stylelint-disable-line */
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .colXsAuto {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 to 12 {
+    .colXs$(i) {
+      -webkit-box-flex: 0; /* stylelint-disable-line */
+      flex: 0 0 makeCol($(i), 12);
+      max-width: makeCol($(i), 12);
+    }
+  }
+}
+
+@media (min-width: $breakpointSmMin) {
+  @mixin gridColClassesPadding $spacingBase;
+
+  .colSm {
+    -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+    flex-basis: 0;
+    -webkit-box-flex: 1; /* stylelint-disable-line */
+    -ms-flex-positive: 1; /* stylelint-disable-line */
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .colSmAuto {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 to 12 {
+    .colSm$(i) {
+      -webkit-box-flex: 0; /* stylelint-disable-line */
+      flex: 0 0 makeCol($(i), 12);
+      max-width: makeCol($(i), 12);
+    }
+  }
+}
+
+@media (min-width: $breakpointMdMin) {
+  @mixin gridColClassesPadding $spacingBig;
+
+  .colMd {
+    -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+    flex-basis: 0;
+    -webkit-box-flex: 1; /* stylelint-disable-line */
+    -ms-flex-positive: 1; /* stylelint-disable-line */
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .colMdAuto {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 to 12 {
+    .colMd$(i) {
+      -webkit-box-flex: 0; /* stylelint-disable-line */
+      flex: 0 0 makeCol($(i), 12);
+      max-width: makeCol($(i), 12);
+    }
+  }
+}
+
+@media (min-width: $breakpointLgMin) {
+  @mixin gridColClassesPadding $spacingBig;
+
+  .colLg {
+    -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+    flex-basis: 0;
+    -webkit-box-flex: 1; /* stylelint-disable-line */
+    -ms-flex-positive: 1; /* stylelint-disable-line */
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .colLgAuto {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 to 12 {
+    .colLg$(i) {
+      -webkit-box-flex: 0; /* stylelint-disable-line */
+      flex: 0 0 makeCol($(i), 12);
+      max-width: makeCol($(i), 12);
+    }
+  }
+}
+
+@media (min-width: $breakpointXlMin) {
+  @mixin gridColClassesPadding $spacingBig;
+
+  .colXl {
+    -ms-flex-preferred-size: 0; /* stylelint-disable-line */
+    flex-basis: 0;
+    -webkit-box-flex: 1; /* stylelint-disable-line */
+    -ms-flex-positive: 1; /* stylelint-disable-line */
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .colXlAuto {
+    -webkit-box-flex: 0; /* stylelint-disable-line */
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 to 12 {
+    .colXl$(i) {
+      -webkit-box-flex: 0; /* stylelint-disable-line */
+      flex: 0 0 makeCol($(i), 12);
+      max-width: makeCol($(i), 12);
+    }
+  }
+}

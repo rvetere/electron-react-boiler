@@ -1,0 +1,227 @@
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.pullLeft {
+  float: left;
+}
+
+.pullRight {
+  float: right;
+}
+
+.clearfix {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.errorMessage {
+  position: relative;
+  z-index: $zIndexTeaser;
+  margin-top: $spacingBase;
+  margin-bottom: $spacingBase;
+  color: $errorColor;
+}
+
+.noPadding {
+  padding: 0 !important; /* stylelint-disable-line */
+}
+
+.delimiterAfter {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $lightDelimiterColor;
+  }
+}
+
+.noDelimiterAfterLast:last-child {
+  &::after {
+    display: none;
+  }
+}
+
+.delimiterBefore {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: $lightDelimiterColor;
+  }
+}
+
+/* ASPECT RATIOS */
+.aspectRatio {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    display: block;
+  }
+}
+
+.aspectRatioContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspectRatio2x1 {
+  composes: aspectRatio;
+
+  &::before {
+    padding-top: 50%;
+  }
+}
+
+.aspectRatio3x2 {
+  composes: aspectRatio;
+
+  &::before {
+    padding-top: 66.6666666666%;
+  }
+}
+
+.aspectRatio4x3 {
+  composes: aspectRatio;
+
+  &::before {
+    padding-top: 75%;
+  }
+}
+
+.aspectRatio16x9 {
+  composes: aspectRatio;
+
+  &::before {
+    padding-top: 56.25%;
+  }
+}
+
+/* stylelint-disable */
+.loadingSpinner,
+:global(.Select-loading) {
+  /* stylelint-enable */
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  border: solid 1px transparent;
+  border-top-color: $primaryColor;
+  border-left-color: $primaryColor;
+  border-radius: 50%;
+  animation: spinner 500ms linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* TODO: try to remove !important after refactoring of button component! check in footer */
+.hiddenXs {
+  @media (max-width: $breakpointXsMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenSm {
+  @media (min-width: $breakpointSmMin) and (max-width: $breakpointSmMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenMd {
+  @media (min-width: $breakpointMdMin) and (max-width: $breakpointMdMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenLg {
+  @media (min-width: $breakpointLgMin) and (max-width: $breakpointLgMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenXl {
+  @media (min-width: $breakpointXlMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenXsUp {
+  @media (min-width: $breakpointSmMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenSmDown {
+  @media (max-width: $breakpointSmMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenSmUp {
+  @media (min-width: $breakpointSmMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenMdDown {
+  @media (max-width: $breakpointMdMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenMdUp {
+  @media (min-width: $breakpointMdMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenLgDown {
+  @media (max-width: $breakpointMdMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenLgUp {
+  @media (min-width: $breakpointLgMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenXlDown {
+  @media (max-width: $breakpointLgMax) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
+
+.hiddenXlUp {
+  @media (min-width: $breakpointXlMin) {
+    display: none !important; /* stylelint-disable-line */
+  }
+}
