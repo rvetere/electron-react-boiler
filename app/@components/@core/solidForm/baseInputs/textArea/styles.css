@@ -1,0 +1,16 @@
+.wrapper {
+  textarea {
+    min-height: 100px;
+
+    &:focus,
+    &:active {
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.error {
+  textarea {
+    border-color: $errorColor;
+  }
+}

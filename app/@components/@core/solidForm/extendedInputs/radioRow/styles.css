@@ -1,0 +1,46 @@
+.radioRow {
+  padding: $spacingSmall 0;
+  border-top: 1px solid $lightDelimiterColor;
+
+  label {
+    display: flex;
+    width: 100%;
+
+    > * {
+      vertical-align: top;
+    }
+  }
+
+  .optionName {
+    display: inline-block;
+    margin-bottom: $spacingSmall;
+  }
+
+  .optionDetail {
+    display: block;
+    margin-top: -$spacingSmall;
+    flex: 1 0 calc(100% - 11rem);
+  }
+
+  @media (min-width: $breakpointSmMin) {
+    display: flex;
+
+    label {
+      flex: 1 0 11rem;
+    }
+
+    .optionName {
+      margin-bottom: 0;
+    }
+
+    .optionDetail {
+      padding-left: $spacingBase;
+      margin-top: 0;
+    }
+  }
+
+  .disabled {
+    opacity: .4;
+    pointer-events: none;
+  }
+}

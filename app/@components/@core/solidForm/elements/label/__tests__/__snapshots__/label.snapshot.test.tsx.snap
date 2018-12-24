@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Label component should render correctly 1`] = `
+<div>
+  <label
+    class="formLabel label"
+  >
+    <span>
+      a label
+    </span>
+    label text
+  </label>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LimitInfo LimitInfo component should render correctly 1`] = `
+<div>
+  <p
+    class="limitInfo limitReached"
+  >
+    [0] / [1] characters
+  </p>
+</div>
+`;

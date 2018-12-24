@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+
+  input {
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: $breakpointMdMin) {
+  input:focus + .eye,
+  .wrapper:hover .eye {
+    opacity: 1;
+  }
+}
+
+.eye {
+  position: absolute;
+  top: 27px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transition: opacity $transitionSpeedFast;
+
+  button {
+    width: 40px;
+    height: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  svg {
+    margin: 0;
+    float: initial;
+  }
+
+  @media (min-width: $breakpointMdMin) {
+    opacity: 0;
+    top: 23px;
+    height: 36px;
+  }
+}

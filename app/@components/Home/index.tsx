@@ -1,5 +1,6 @@
 import routes from '@constants/routes'
-import React, { PureComponent } from 'react'
+import { FormController, IFormControllerActions, InputText } from '@core/solidForm'
+import React, { PureComponent, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles.css'
 
@@ -9,6 +10,7 @@ export default class Home extends PureComponent<{}> {
       <div className={styles.container} data-tid="container">
         <h1>Home</h1>
         <Link to={routes.COUNTER}>to Counter</Link>
+        <FormController>{({ inputProps }: IFormControllerActions): ReactNode => <InputText name="test" inputProps={inputProps} />}</FormController>
       </div>
     )
   }

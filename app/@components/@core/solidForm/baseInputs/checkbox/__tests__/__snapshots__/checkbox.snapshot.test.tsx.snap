@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Checkbox component should render correctly 1`] = `
+<div>
+  <label
+    class="formField inputElement checkbox optional"
+  >
+    <input
+      aria-describedby="checkboxValidationMessage"
+      class="htmlInput"
+      name="checkbox"
+      type="checkbox"
+    />
+    <span
+      class="checkboxSvg inputSvg"
+    >
+      <test-file-stub
+        classname="digicon"
+        height="18"
+        width="18"
+      />
+    </span>
+    checkbox Label
+  </label>
+</div>
+`;

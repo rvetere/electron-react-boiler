@@ -1,0 +1,39 @@
+.radio {
+  color: $primaryColor;
+
+  * {
+    border-color: $primaryColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  input:focus + span {
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.sideBySide {
+  display: inline-block;
+
+  & + .sideBySide {
+    margin-left: $spacingBase;
+  }
+}
+
+.inverted {
+  color: $white;
+
+  * {
+    border-color: $white;
+  }
+}
+
+.error {
+  * {
+    color: $errorColor;
+  }
+}

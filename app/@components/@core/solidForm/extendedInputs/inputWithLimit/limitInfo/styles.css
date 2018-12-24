@@ -1,0 +1,8 @@
+.limitInfo {
+  margin: 0;
+  color: $dustyGray;
+}
+
+.limitReached {
+  color: $errorColor;
+}

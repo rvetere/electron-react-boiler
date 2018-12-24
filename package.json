@@ -249,6 +249,7 @@
     "tslint-language-service": "^0.9.9",
     "typescript": "^3.2.2",
     "url-loader": "^1.1.2",
+    "utility-types": "^3.0.0",
     "webpack": "^4.26.0",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
@@ -258,6 +259,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",
+    "@researchgate/react-intersection-observer": "^0.7.4",
+    "class-names": "^1.0.0",
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
     "electron-log": "^2.2.17",
@@ -269,6 +272,7 @@
     "react-redux": "^5.1.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-select": "1.2.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "source-map-support": "^0.5.9"

@@ -1,0 +1,23 @@
+.label {
+  width: 100%;
+  color: $primaryColor;
+  line-height: 1.2;
+
+  > span {
+    display: inline-block;
+    margin-bottom: 7px;
+  }
+
+  &.inverted {
+    color: $white;
+  }
+}
+
+.appendix {
+  margin-left: $spacingSmall;
+  color: $darkDelimiterColor;
+
+  &.inverted {
+    color: $whiteAlpha6;
+  }
+}

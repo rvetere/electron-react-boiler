@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectPlugin SelectPlugin component should render correctly 1`] = `
+<div>
+  <div
+    class="Select select is-searchable Select--single"
+  >
+    <div
+      class="Select-control"
+    >
+      <span
+        class="Select-multi-value-wrapper"
+        id="react-select-2--value"
+      >
+        <div
+          class="Select-placeholder"
+        >
+          Please choose
+        </div>
+        <div
+          class="Select-input"
+          style="display: inline-block;"
+        >
+          <input
+            aria-activedescendant="react-select-2--value"
+            aria-describedby="ariaDescribedBy"
+            aria-expanded="false"
+            aria-haspopup="false"
+            aria-owns=""
+            role="combobox"
+            style="box-sizing: content-box; width: 5px;"
+            value=""
+          />
+          <div
+            style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+          />
+        </div>
+      </span>
+      <span
+        class="Select-arrow-zone"
+      >
+        <test-file-stub
+          classname="digicon"
+          height="16"
+          width="16"
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;

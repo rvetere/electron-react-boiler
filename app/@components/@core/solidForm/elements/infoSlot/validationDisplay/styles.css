@@ -1,0 +1,8 @@
+.validationMessage {
+  margin-bottom: 0;
+  color: $errorColor;
+}
+
+.validationMessage + .validationMessage {
+  margin-left: $spacingSmall;
+}

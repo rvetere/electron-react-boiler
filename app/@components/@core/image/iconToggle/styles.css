@@ -1,0 +1,7 @@
+.wrapper:hover .static {
+  display: none;
+}
+
+.wrapper:not(:hover) .hover {
+  display: none;
+}

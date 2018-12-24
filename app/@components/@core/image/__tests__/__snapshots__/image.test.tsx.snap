@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Image renders correctly 1`] = `
+<div>
+  <observer>
+    <span>
+      <span
+        class="loader spinner centered"
+        style="width: 16px; height: 16px;"
+      />
+      <img
+        alt="AltText"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAADUlEQVQIHWP4z/CfAQAF/wH/t3haYQAAAABJRU5ErkJggg=="
+      />
+      <noscript>
+        &lt;img src="https://static.digitecgalaxus.ch/Files/1/3/7/6/2/9/7/8/MSSurface_Jupiter.jpg?fit=inside%7C300:300&output-format=progressive-jpeg" alt="AltText" /&gt;
+      </noscript>
+    </span>
+  </observer>
+</div>
+`;

@@ -1,0 +1,9 @@
+.digicon {
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+  fill: currentColor;
+
+  /* This transformation fixes blurry icons in firefox */
+  transform: translate3d(0, 0, 0);
+}

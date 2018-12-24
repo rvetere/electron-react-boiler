@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoSlot InfoSlot should render correctly 1`] = `
+<div>
+  <div
+    class="wrapper"
+    id="ariaDescribedBy"
+  >
+    <p
+      class="validationMessage"
+    >
+      a validation message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`InfoSlot InfoSlot should render override when given 1`] = `
+<div>
+  <div
+    class="wrapper"
+    id="ariaDescribedBy"
+  >
+    <div>
+      an override
+    </div>
+  </div>
+</div>
+`;

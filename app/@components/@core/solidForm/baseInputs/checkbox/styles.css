@@ -1,0 +1,49 @@
+.checkbox {
+  color: $primaryColor;
+  * {
+    border-color: $primaryColor;
+  }
+
+  input:focus + span {
+    &::before {
+      border-radius: 20%;
+    }
+  }
+}
+
+.checkboxSvg {
+  border-width: 1px;
+  border-style: solid;
+  background: $white;
+  color: $white;
+  border-radius: 20%;
+}
+
+.isChecked {
+  .checkboxSvg {
+    background: $primaryColor;
+    color: $white;
+  }
+}
+
+.inverted {
+  color: $white;
+
+  .checkboxSvg {
+    background: transparent;
+    border-color: $white;
+  }
+}
+
+.inverted.isChecked {
+  .checkboxSvg {
+    background: $white;
+    color: $primaryColor;
+  }
+}
+
+.error {
+  * {
+    border-color: $errorColor;
+  }
+}

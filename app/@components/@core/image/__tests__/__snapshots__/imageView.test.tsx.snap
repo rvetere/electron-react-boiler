@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageView ImageView renders correctly 1`] = `
+<div>
+  <img
+    alt="AltText"
+    height="300"
+    src="https://static.digitecgalaxus.ch/Files/1/3/7/6/2/9/7/8/MSSurface_Jupiter.jpg?fit=inside%7C228:126&output-format=progressive-jpeg"
+    width="300"
+  />
+  <noscript>
+    &lt;img src="https://static.digitecgalaxus.ch/Files/1/3/7/6/2/9/7/8/MSSurface_Jupiter.jpg?fit=inside%7C228:126&output-format=progressive-jpeg" alt="AltText" /&gt;
+  </noscript>
+</div>
+`;
+
+exports[`ImageView sizer renders correctly 1`] = `
+<div>
+  <img
+    alt="AltText"
+    height="300"
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAADUlEQVQIHWP4z/CfAQAF/wH/t3haYQAAAABJRU5ErkJggg=="
+    width="300"
+  />
+  <noscript>
+    &lt;img src="https://static.digitecgalaxus.ch/Files/1/3/7/6/2/9/7/8/MSSurface_Jupiter.jpg?fit=inside%7C228:126&output-format=progressive-jpeg" alt="AltText" /&gt;
+  </noscript>
+</div>
+`;

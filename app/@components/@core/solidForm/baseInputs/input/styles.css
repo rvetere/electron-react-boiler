@@ -1,0 +1,14 @@
+.wrapper {
+  input {
+    &:focus,
+    &:active {
+      border-color: $primaryColor;
+    }
+  }
+}
+
+.error {
+  input {
+    border-color: $errorColor;
+  }
+}

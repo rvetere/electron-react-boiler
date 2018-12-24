@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea TextArea component should render correctly 1`] = `
+<div>
+  <div
+    class="formField wrapper optional"
+  >
+    <label
+      class="formLabel label"
+    >
+      <span>
+        Username
+      </span>
+      <textarea
+        aria-describedby="usernameValidationMessage"
+        name="username"
+      />
+    </label>
+  </div>
+</div>
+`;

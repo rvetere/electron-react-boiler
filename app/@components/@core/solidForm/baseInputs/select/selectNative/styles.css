@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: $black;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+  }
+
+  &.error {
+    .select {
+      border-color: $errorColor;
+    }
+  }
+}
+
+.select {
+  display: block;
+  width: inherit;
+  height: 36px;
+  border: 1px solid $nobel;
+  padding-left: pxToRem(10);
+  padding-right: pxToRem(20);
+  background: $white;
+  color: $mineShaft;
+  font-size: $fontSizeBase;
+  line-height: 1;
+  letter-spacing: .04em;
+  appearance: none;
+  border-radius: 0;
+
+  &:disabled {
+    background: $alabaster;
+    border-color: $alto;
+    color: $dustyGray;
+
+    + svg {
+      color: $dustyGray;
+    }
+  }
+
+  &:focus {
+    border-color: $black;
+    outline: none;
+  }
+}

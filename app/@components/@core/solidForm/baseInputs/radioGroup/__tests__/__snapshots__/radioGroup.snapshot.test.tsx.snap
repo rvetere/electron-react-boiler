@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup RadioGroup component should render correctly 1`] = `
+<div>
+  <div
+    class="formField optional"
+  >
+    <label
+      class="radioOption radio inputElement disabled"
+    >
+      <input
+        aria-describedby="radioGroupValidationMessage"
+        class="htmlInput"
+        disabled=""
+        name="radioGroup"
+        type="radio"
+        value="test1"
+      />
+      <span
+        class="radioSvg inputSvg"
+      >
+        <test-file-stub
+          classname="digicon"
+          height="18"
+          width="18"
+        />
+      </span>
+      test 1 Label
+    </label>
+    <label
+      class="radioOption radio inputElement"
+    >
+      <input
+        aria-describedby="radioGroupValidationMessage"
+        class="htmlInput"
+        name="radioGroup"
+        type="radio"
+        value="test2"
+      />
+      <span
+        class="radioSvg inputSvg"
+      >
+        <test-file-stub
+          classname="digicon"
+          height="18"
+          width="18"
+        />
+      </span>
+      test 2 Label
+    </label>
+  </div>
+</div>
+`;

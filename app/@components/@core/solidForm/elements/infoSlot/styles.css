@@ -1,0 +1,5 @@
+.wrapper {
+  margin-top: $spacingHalf;
+  min-height: 21px;
+  display: flex;
+}

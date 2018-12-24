@@ -1,6 +1,6 @@
 const colors = require('./colors')
 
-const theme = process.env.THEME
+const theme = process.env.THEME || 'galaxus'
 
 const {
   allports,

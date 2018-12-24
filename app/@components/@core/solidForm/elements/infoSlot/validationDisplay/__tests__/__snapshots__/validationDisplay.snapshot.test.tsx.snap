@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidationDisplay ValidationDisplay should render correctly 1`] = `<div />`;
+
+exports[`ValidationDisplay ValidationDisplay should show validation when touched 1`] = `
+<div>
+  <p
+    class="validationMessage"
+  >
+    a validation message
+  </p>
+</div>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputWithLimit InputWithLimit component must show limit indication 1`] = `
+<div>
+  <div
+    class="formField wrapper"
+  >
+    <label
+      class="formLabel label"
+    >
+      <span>
+        With Limit
+      </span>
+      <input
+        aria-describedby="withLimitValidationMessage"
+        name="withLimit"
+        value="to loong!"
+      />
+      <div
+        class="wrapper"
+        id="withLimitValidationMessage"
+      >
+        <p
+          class="limitInfo limitReached"
+        >
+          [0] / [1] characters
+        </p>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`InputWithLimit InputWithLimit component should render correctly 1`] = `
+<div>
+  <div
+    class="formField wrapper"
+  >
+    <label
+      class="formLabel label"
+    >
+      <span>
+        With Limit
+      </span>
+      <input
+        aria-describedby="withLimitValidationMessage"
+        name="withLimit"
+        value=""
+      />
+      <div
+        class="wrapper"
+        id="withLimitValidationMessage"
+      />
+    </label>
+  </div>
+</div>
+`;

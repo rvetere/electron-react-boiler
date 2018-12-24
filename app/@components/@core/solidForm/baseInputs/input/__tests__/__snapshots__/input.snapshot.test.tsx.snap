@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputText InputText component should render correctly 1`] = `
+<div>
+  <div
+    class="formField wrapper optional"
+  >
+    <label
+      class="formLabel label"
+    >
+      <span>
+        Input
+      </span>
+      <input
+        aria-describedby="inputValidationMessage"
+        name="input"
+        value=""
+      />
+    </label>
+  </div>
+</div>
+`;

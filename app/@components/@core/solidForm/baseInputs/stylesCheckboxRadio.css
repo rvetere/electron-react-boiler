@@ -1,0 +1,77 @@
+.inputElement {
+  position: relative;
+  display: table;
+  padding: $spacingHalf 0;
+  cursor: pointer;
+}
+
+.inputSvg {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: $spacingSmall;
+  margin-bottom: -5px;
+  vertical-align: top;
+
+  svg {
+    margin: 50% 0 0 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.labelLeft {
+  .inputSvg {
+    margin-right: 0;
+    margin-left: $spacingSmall;
+  }
+}
+
+/* needs to be implementet */
+.error {
+  * {
+    border-color: $errorColor;
+  }
+}
+
+.disabled {
+  opacity: .4;
+  pointer-events: none;
+}
+
+/* focus border */
+.htmlInput:focus + span {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: '';
+
+    @if $THEME == galaxus {
+      border: 2px solid $blackAlpha15;
+    } @else {
+      border: 2px solid $allports2;
+    }
+  }
+}
+
+.inverted {
+  .htmlInput:focus + span {
+    &::before {
+      border-color: $whiteAlpha3;
+    }
+  }
+}
+
+/* hide standard box */
+.htmlInput {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
