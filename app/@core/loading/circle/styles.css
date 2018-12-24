@@ -1,0 +1,16 @@
+.spinner {
+  composes: loadingSpinner from '@postcss/utils/helpers.css';
+
+  &.inverted {
+    border-color: $whiteAlpha6;
+    border-left-color: $primaryColor;
+  }
+
+  &.centered {
+    position: absolute;
+    z-index: $zIndexLoading;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

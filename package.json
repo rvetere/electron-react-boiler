@@ -30,7 +30,8 @@
     "test-all": "yarn check-types && yarn lint && yarn build && yarn test && yarn build-e2e && yarn test-e2e",
     "test-e2e": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe electron:./ ./test/e2e/HomePage.e2e.js",
     "test-e2e-live": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe-live electron:./ ./test/e2e/HomePage.e2e.js",
-    "test-watch": "yarn test --watch"
+    "test-watch": "yarn test --watch",
+    "svgr": "npx @svgr/cli -d .svgr .svgr"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -182,6 +183,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
     "@babel/register": "^7.0.0",
+    "@svgr/cli": "^4.1.0",
     "@types/react": "16.4.11",
     "@types/react-test-renderer": "16.0.2",
     "@types/redux": "^3.6.0",

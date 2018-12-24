@@ -2,9 +2,9 @@
  * Base webpack config used across other specific configs
  */
 
-import path from 'path';
-import webpack from 'webpack';
-import { dependencies } from '../package.json';
+import path from 'path'
+import webpack from 'webpack'
+import { dependencies } from '../package.json'
 
 export default {
   externals: [...Object.keys(dependencies || {})],
@@ -34,7 +34,20 @@ export default {
    * Determine the array of extensions that should be used to resolve modules.
    */
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      '@core': path.resolve(__dirname, '../app/@core'),
+      '@pages': path.resolve(__dirname, '../app/@pages'),
+      '@components': path.resolve(__dirname, '../app/@components'),
+      '@actions': path.resolve(__dirname, '../app/@actions'),
+      '@reducers': path.resolve(__dirname, '../app/@reducers'),
+      '@store': path.resolve(__dirname, '../app/@store'),
+      '@config': path.resolve(__dirname, '../app/lib/@config'),
+      '@constants': path.resolve(__dirname, '../app/lib/@constants'),
+      '@decorators': path.resolve(__dirname, '../app/lib/@decorators'),
+      '@helpers': path.resolve(__dirname, '../app/lib/@helpers'),
+      '@postcss': path.resolve(__dirname, '../app/lib/@postcss')
+    }
   },
 
   plugins: [
@@ -44,4 +57,4 @@ export default {
 
     new webpack.NamedModulesPlugin()
   ]
-};
+}

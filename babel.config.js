@@ -34,6 +34,27 @@ module.exports = api => {
       // Stage 0
       require('@babel/plugin-proposal-function-bind'),
 
+      [
+        require('babel-plugin-module-resolver'),
+        {
+          root: ['.'],
+          cwd: 'babelrc',
+          alias: {
+            '@core': './app/@core',
+            '@pages': './app/@pages',
+            '@components': './app/@components',
+            '@actions': './app/@actions',
+            '@reducers': './app/@reducers',
+            '@store': './app/@store',
+            '@config': './app/lib/@config',
+            '@constants': './app/lib/@constants',
+            '@decorators': './app/lib/@decorators',
+            '@helpers': './app/lib/@helpers',
+            '@postcss': './app/lib/@postcss'
+          }
+        }
+      ],
+
       // Stage 1
       require('@babel/plugin-proposal-export-default-from'),
       require('@babel/plugin-proposal-logical-assignment-operators'),
@@ -55,27 +76,6 @@ module.exports = api => {
       require('@babel/plugin-proposal-object-rest-spread'),
       [require('@babel/plugin-proposal-class-properties'), { loose: true }],
       require('@babel/plugin-proposal-json-strings'),
-
-      [
-        require('babel-plugin-module-resolver'),
-        {
-          root: ['.'],
-          cwd: 'babelrc',
-          alias: {
-            '@config': './app/lib/@config',
-            '@constants': './app/@constants',
-            '@core': './app/@components/@core',
-            '@containers': './app/@components/@containers',
-            '@components': './app/@components',
-            '@actions': './app/@actions',
-            '@reducers': './app/@reducers',
-            '@store': './app/@store',
-            '@decorators': './app/lib/@decorators',
-            '@helpers': './app/lib/@helpers',
-            '@postcss': './app/lib/@postcss'
-          }
-        }
-      ],
 
       ...(development ? developmentPlugins : productionPlugins)
     ]
