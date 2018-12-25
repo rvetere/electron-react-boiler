@@ -7,3 +7,27 @@
 @import './lib/@postcss/globalCss/fonts.css';
 @import './lib/@postcss/globalCss/layout.css';
 @import './lib/@postcss/globalCss/elements.css';
+
+:global(.ssrOnly) {
+  position: absolute;
+  z-index: $zIndexSsrOnly;
+  top: -1000px;
+  left: -1000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: $spacingBase;
+  background: $primaryColor;
+  color: $white;
+  text-align: left;
+
+  &:active,
+  &:focus,
+  &:hover {
+    top: 0;
+    left: 0;
+    overflow: visible;
+    width: auto;
+    height: auto;
+  }
+}

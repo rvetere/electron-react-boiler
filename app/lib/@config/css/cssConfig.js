@@ -32,12 +32,11 @@ const themes = {
   default: {
     fontFamilyDefinition: 'Gibson',
     fontFamily: 'Gibson, Arial, sans-serif',
-    primaryColor: wildSand,
+    primaryColor: scorpion,
     ascendColor: black,
     linkColor: mariner,
     linkHoverColor: greenVogue,
     lightDelimiterColor: alto,
-    focusColor: sunglow,
     darkDelimiterColor: nobel,
     overlayColor: scorpion03,
     successColor: apple,

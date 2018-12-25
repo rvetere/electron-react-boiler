@@ -1,9 +1,11 @@
+import { Viewport } from '@constants/window'
 import { NoSSR } from '@core'
 import { InfoSlot } from '@core/solidForm/elements/infoSlot'
 import { Label } from '@core/solidForm/elements/label'
 import { IFormControllerPayload } from '@core/solidForm/formController/types'
 import { RequiredMsgDefault } from '@core/solidForm/validators'
 import noop from '@helpers/noop'
+import { isBreakpointSmaller } from '@helpers/window'
 import classNames from 'classnames'
 import React, { PureComponent, ReactNode } from 'react'
 import { hasValidation, validateInput } from '../input/helpers'
@@ -102,9 +104,9 @@ export class Select extends PureComponent<ISelectProps, ISelectState> {
       </NoSSR>
     )
 
-    // if (native || (isBreakpointSmaller(Viewport.LG) && !isMultiSelect && !isAsync)) {
-    //   selectJsx = <SelectNative {...nativeProps} />
-    // }
+    if (native || (isBreakpointSmaller(Viewport.LG) && !isMultiSelect && !isAsync)) {
+      selectJsx = <SelectNative {...nativeProps} />
+    }
 
     return (
       <>

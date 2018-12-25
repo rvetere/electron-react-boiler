@@ -1,6 +1,6 @@
 import logger from '@helpers/logger'
 import noop from '@helpers/noop'
-import React, { PureComponent, ReactNode } from 'react'
+import { PureComponent, ReactNode } from 'react'
 import { getFormValues, isFormValid, updateFormFields } from './helpers'
 import { IFormControllerField, IFormControllerPayload, IFormControllerProps, IFormControllerState } from './types'
 

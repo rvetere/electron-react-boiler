@@ -1,6 +1,8 @@
-import classNames from 'class-names'
+import Translation from '@core/translation'
+import { TranslationFunc } from '@core/translation/types'
+import classNames from 'classnames'
 import React, { PureComponent, ReactNode, RefObject } from 'react'
-import Select from 'react-select'
+import Select, { Async } from 'react-select'
 import { ISelectOption, ISelectState } from '../types'
 import { CheckboxOption } from './checkboxOption'
 import { ArrowRenderer, ClearRenderer, unClearableOptions } from './helpers'
@@ -32,8 +34,8 @@ export class SelectPlugin extends PureComponent<ISelectPluginProps, ISelectState
     props.optionClassName = styles.option
     props.arrowRenderer = ArrowRenderer
     props.clearRenderer = ClearRenderer
-    props.noResultsText = 'No results'
-    props.loadingPlaceholder = 'Loading...'
+    props.noResultsText = <Translation>No results</Translation>
+    props.loadingPlaceholder = <Translation>Loading...</Translation>
 
     props.onChange = this.handleChange
 
@@ -42,31 +44,37 @@ export class SelectPlugin extends PureComponent<ISelectPluginProps, ISelectState
     const isAsync = typeof props.loadOptions !== 'undefined'
     const finalOptions = !isMultiSelect ? unClearableOptions(options) : options
 
-    if (isAsync) {
-      return (
-        <Select.Async
-          className={classNames(styles.select, {
-            [styles.error]: hasError
-          })}
-          placeholder={props.placeholder || 'Please choose'}
-          aria-describedby={this.props.describedById}
-          ref={this.selectRef}
-          {...props}
-        />
-      )
-    }
-
     return (
-      <Select
-        className={classNames(styles.select, {
-          [styles.error]: hasError
-        })}
-        placeholder={props.placeholder || 'Please choose'}
-        aria-describedby={this.props.describedById}
-        ref={this.selectRef}
-        options={finalOptions}
-        {...props}
-      />
+      <Translation keys={['Please choose']}>
+        {(getTranslation: TranslationFunc): ReactNode => {
+          if (isAsync) {
+            return (
+              <Async
+                className={classNames(styles.select, {
+                  [styles.error]: hasError
+                })}
+                placeholder={props.placeholder || getTranslation('Please choose')}
+                aria-describedby={this.props.describedById}
+                ref={this.selectRef}
+                {...props}
+              />
+            )
+          }
+
+          return (
+            <Select
+              className={classNames(styles.select, {
+                [styles.error]: hasError
+              })}
+              placeholder={props.placeholder || getTranslation('Please choose')}
+              aria-describedby={this.props.describedById}
+              ref={this.selectRef}
+              options={finalOptions}
+              {...props}
+            />
+          )
+        }}
+      </Translation>
     )
   }
 

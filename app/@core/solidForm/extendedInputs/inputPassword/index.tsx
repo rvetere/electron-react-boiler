@@ -1,7 +1,8 @@
 import { Button } from '@core'
 import { Eye, EyeClosed } from '@core/image/icon'
 import { InputText } from '@core/solidForm'
-import React, { PureComponent, ReactNode, SyntheticEvent } from 'react'
+import Translation from '@core/translation'
+import { PureComponent, ReactNode, SyntheticEvent } from 'react'
 import styles from './styles.css'
 import { IInputPasswordProps, IInputPasswordState } from './types'
 
@@ -19,7 +20,9 @@ export class InputPassword extends PureComponent<IInputPasswordProps, IInputPass
         {!hideToggle && (
           <span className={styles.eye}>
             <Button onMouseDown={this.toggle} tabIndex={-1}>
-              <span className="ssrOnly">Toggle password visibility</span>
+              <span className="ssrOnly">
+                <Translation>Toggle password visibility</Translation>
+              </span>
               {!isVisible && <Eye />}
               {isVisible && <EyeClosed />}
             </Button>
