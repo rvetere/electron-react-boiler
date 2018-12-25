@@ -1,5 +1,6 @@
 const path = require('path')
 const variables = require('./app/lib/@postcss/variables')
+const atImport = require('postcss-import')
 const forLoop = require('postcss-for')
 const mixins = require('postcss-mixins')
 const conditionals = require('postcss-conditionals')
@@ -12,6 +13,7 @@ const cssnano = require('cssnano')
 const IS_DEV = process.env.NODE_ENV === 'development'
 
 const plugins = [
+  atImport(),
   forLoop(),
   mixins({
     mixinsDir: path.join(process.cwd(), 'app', 'lib', '@postcss', 'mixins')

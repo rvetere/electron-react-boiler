@@ -1,0 +1,21 @@
+.navigation {
+  position: fixed;
+  z-index: $zIndexTooltipChevron;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(33, 33, 33, .85);
+}
+
+.entry {
+  display: inline-block;
+  margin: 4px 6px;
+  color: $white;
+  font-size: $fontSizeSmall;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: $fontWeightBold;
+  cursor: default;
+}

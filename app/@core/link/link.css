@@ -1,0 +1,58 @@
+.iconPadding svg {
+  margin-right: $spacingSmall;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0;
+  border: 0;
+  background: 0;
+  color: $linkColor;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: $linkHoverColor;
+  }
+
+  &:active {
+    color: $black;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.inverted {
+  color: $whiteAlpha7;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+.fullSizeOverlay {
+  position: absolute;
+  z-index: $zIndexNavigation;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-color: $overlayColor;
+  transition: all $transitionSpeedFast ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

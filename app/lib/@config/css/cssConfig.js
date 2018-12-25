@@ -1,6 +1,6 @@
 const colors = require('./colors')
 
-const theme = process.env.THEME || 'galaxus'
+const theme = process.env.THEME || 'default'
 
 const {
   allports,
@@ -29,37 +29,15 @@ const {
 } = colors
 
 const themes = {
-  digitec: {
-    portalId: 25,
-    fontFamilyDefinition: 'Roboto',
-    fontFamily: 'Roboto, Arial, sans-serif',
-    primaryColor: allports,
-    ascendColor: monza,
-    linkColor: allports,
-    linkHoverColor: monza,
-    lightDelimiterColor: periwinkleGray,
-    darkDelimiterColor: nobel,
-    overlayColor: allports03,
-    successColor: grassland,
-    successBackgroundColor: grassland,
-    validColor: grassland,
-    errorColor: monza,
-    errorBackgroundColor: ferrari,
-    infoColor: goldenDream,
-    infoBackgroundColor: goldenDream,
-    lightBackgroundColor: blackSqueeze2,
-    invertedColor: allports,
-    skeletonBackground: blackSqueeze1
-  },
-  galaxus: {
-    portalId: 22,
+  default: {
     fontFamilyDefinition: 'Gibson',
     fontFamily: 'Gibson, Arial, sans-serif',
-    primaryColor: scorpion,
+    primaryColor: wildSand,
     ascendColor: black,
     linkColor: mariner,
     linkHoverColor: greenVogue,
     lightDelimiterColor: alto,
+    focusColor: sunglow,
     darkDelimiterColor: nobel,
     overlayColor: scorpion03,
     successColor: apple,
@@ -69,7 +47,7 @@ const themes = {
     errorBackgroundColor: jaffa,
     infoColor: sunglow,
     infoBackgroundColor: sunglow,
-    lightBackgroundColor: wildSand,
+    lightBackgroundColor: scorpion,
     invertedColor: mineShaft,
     skeletonBackground: gallery
   }

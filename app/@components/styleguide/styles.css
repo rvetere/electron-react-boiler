@@ -1,0 +1,47 @@
+:global(html),
+:global(body),
+:global(#__next) {
+  height: 100%;
+}
+
+:global(.styleguide) {
+  h2 {
+    padding: $spacingSmall;
+    margin: 0 0 $spacingSmall;
+    background: $allports;
+    color: $white;
+  }
+
+  h3 {
+    padding: 4px 0 2px;
+    margin: 0 0 $spacingMedium;
+    background: $blackAlpha15;
+    color: rgba(45, 45, 45, .64);
+    text-transform: uppercase;
+
+    padding-right: $spacingBase;
+    padding-left: $spacingBase;
+    margin-right: -$spacingBase;
+    margin-left: -$spacingBase;
+    border-bottom: 1px solid rgba(162, 162, 162, .65);
+    box-shadow: 1px 2px 5px rgba(33, 33, 33, .21);
+    border-top: 1px solid rgba(204, 204, 204, .45);
+
+    @media (min-width: $breakpointMdMin) {
+      padding-right: $spacingBig;
+      padding-left: $spacingBig;
+      margin-right: -$spacingBig;
+      margin-left: -$spacingBig;
+    }
+  }
+}
+
+.styleguide {
+  height: auto;
+  border: $spacingBig solid $dustyGray;
+  background: $white;
+}
+
+.content {
+  position: relative;
+}

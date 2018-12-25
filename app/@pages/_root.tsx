@@ -1,5 +1,5 @@
 import { ConnectedRouter } from 'connected-react-router'
-import React, { Component, ReactNode } from 'react'
+import * as React from 'react'
 import { Provider } from 'react-redux'
 import { Store } from 'redux'
 import Routes from '../Routes'
@@ -9,8 +9,8 @@ export interface IRootProps {
   history: {}
 }
 
-export default class Root extends Component<IRootProps> {
-  public render(): ReactNode {
+export default class Root extends React.Component<IRootProps> {
+  public render(): React.ReactNode {
     const { store, history } = this.props
     return (
       <Provider store={store}>

@@ -3,7 +3,7 @@ import baseStyles from '@core/solidForm/baseInputs/stylesCheckboxRadio.css'
 import { LabelPosition } from '@core/solidForm/types'
 import noop from '@helpers/noop'
 import classNames from 'class-names'
-import { PureComponent, ReactNode } from 'react'
+import React, { PureComponent, ReactNode } from 'react'
 import styles from './styles.css'
 import { IRadioOptionProps } from './types'
 

@@ -1,7 +1,7 @@
 import { Button } from '@core'
 import { Eye, EyeClosed } from '@core/image/icon'
 import { InputText } from '@core/solidForm'
-import { PureComponent, ReactNode, SyntheticEvent } from 'react'
+import React, { PureComponent, ReactNode, SyntheticEvent } from 'react'
 import styles from './styles.css'
 import { IInputPasswordProps, IInputPasswordState } from './types'
 

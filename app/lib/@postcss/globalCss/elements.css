@@ -1,0 +1,107 @@
+h1 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeHuge;
+  line-height: 1.3;
+  letter-spacing: .03em;
+  margin-bottom: $spacingBig;
+
+  @media (min-width: $breakpointMdMin) {
+    font-size: $fontSizeHugeDesktop;
+  }
+}
+
+h2 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeBig;
+  line-height: 1.5;
+  letter-spacing: .03em;
+  margin-bottom: $spacingMedium;
+}
+
+h3 {
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeBase;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: $spacingMedium 0;
+  background-color: $alto;
+}
+
+strong,
+b {
+  font-weight: $fontWeightBold;
+}
+
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: $fontSizeSmall;
+}
+
+ol {
+  padding-left: $spacingMedium;
+
+  @media (min-width: $breakpointMdMin) {
+    padding-left: $spacingBase;
+  }
+}
+
+p {
+  font-size: $fontSizeBase;
+  font-weight: $fontWeightNormal;
+  margin-bottom: $spacingMedium;
+  word-wrap: break-word;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -.3em;
+  left: pxToRem(2);
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: $fontSizeBase;
+
+  &::placeholder {
+    color: $silver;
+  }
+}
+
+input {
+  border-radius: 0;
+  border: 1px solid $nobel;
+  background-color: $white;
+  line-height: 1.389; /* 36px height */
+  max-width: 100%;
+
+  &[type='number'] {
+    appearance: textfield;
+  }
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+noscript img {
+  max-height: 100%;
+}

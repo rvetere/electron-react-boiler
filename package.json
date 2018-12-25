@@ -185,6 +185,7 @@
     "@babel/register": "^7.0.0",
     "@svgr/cli": "^4.1.0",
     "@types/react": "16.4.11",
+    "@types/react-router": "^4.4.3",
     "@types/react-test-renderer": "16.0.2",
     "@types/redux": "^3.6.0",
     "babel-core": "7.0.0-bridge.0",
@@ -260,7 +261,6 @@
     "yarn": "^1.12.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.5.0",
     "@researchgate/react-intersection-observer": "^0.7.4",
     "class-names": "^1.0.0",
     "devtron": "^1.4.0",

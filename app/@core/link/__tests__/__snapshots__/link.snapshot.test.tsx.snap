@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Link component should render correctly with absoluteUrl 1`] = `
+<a
+  className="link"
+  href="/some/action"
+  onClick={[Function]}
+>
+  someText
+</a>
+`;
+
+exports[`Link Link component should render correctly with route properties 1`] = `
+<a
+  className="link"
+  href="/sale/somename-someid?someKey=someValue&someOtherKey=someOtherValue"
+  onClick={[Function]}
+>
+  someText
+</a>
+`;

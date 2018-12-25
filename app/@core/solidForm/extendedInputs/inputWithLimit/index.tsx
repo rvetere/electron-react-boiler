@@ -3,7 +3,7 @@ import { IInputTextProps } from '@core/solidForm/baseInputs/input/types'
 import { ITextAreaProps } from '@core/solidForm/baseInputs/textArea/types'
 import { IValidationDisplayConfig } from '@core/solidForm/elements/infoSlot/validationDisplay/types'
 import { IValidatorResult } from '@core/solidForm/validators/types'
-import { PureComponent, ReactNode } from 'react'
+import React, { PureComponent, ReactNode } from 'react'
 import { LimitInfo } from './limitInfo'
 import { IInputTextWithLimitProps, IInputWithLimitState, ITextAreaWithLimitProps } from './types'
 

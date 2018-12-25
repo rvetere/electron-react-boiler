@@ -1,4 +1,4 @@
-import { PureComponent, ReactNode } from 'react'
+import React, { PureComponent, ReactNode } from 'react'
 import styles from './styles.css'
 import { IValidationDisplayProps, IValidationMessage } from './types'
 

@@ -1,0 +1,17 @@
+.inverted {
+  background: $mineShaft;
+  padding-right: $spacingBase;
+  padding-left: $spacingBase;
+  margin-right: -$spacingBase;
+  margin-left: -$spacingBase;
+  margin-top: -$spacingMedium;
+  padding-top: $spacingMedium;
+  padding-bottom: $spacingMedium;
+
+  @media (min-width: $breakpointMdMin) {
+    padding-right: $spacingBig;
+    padding-left: $spacingBig;
+    margin-right: -$spacingBig;
+    margin-left: -$spacingBig;
+  }
+}

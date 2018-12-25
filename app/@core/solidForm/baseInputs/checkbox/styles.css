@@ -22,22 +22,22 @@
 .isChecked {
   .checkboxSvg {
     background: $primaryColor;
-    color: $white;
+    color: $lightBackgroundColor;
   }
 }
 
 .inverted {
-  color: $white;
+  color: $lightBackgroundColor;
 
   .checkboxSvg {
     background: transparent;
-    border-color: $white;
+    border-color: $lightBackgroundColor;
   }
 }
 
 .inverted.isChecked {
   .checkboxSvg {
-    background: $white;
+    background: $lightBackgroundColor;
     color: $primaryColor;
   }
 }

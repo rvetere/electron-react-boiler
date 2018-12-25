@@ -1,7 +1,7 @@
 import { ChevronDown } from '@core/image/icon'
 import noop from '@helpers/noop'
 import classNames from 'classnames'
-import { PureComponent, ReactNode } from 'react'
+import React, { PureComponent, ReactNode } from 'react'
 import { ISelectOption, ISelectState } from '../types'
 import styles from './styles.css'
 import { ISelectNativeProps } from './types'

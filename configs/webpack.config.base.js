@@ -55,6 +55,10 @@ export default {
       NODE_ENV: 'production'
     }),
 
+    new webpack.ProvidePlugin({
+      React: 'react'
+    }),
+
     new webpack.NamedModulesPlugin()
   ]
 }

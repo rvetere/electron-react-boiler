@@ -1,6 +1,6 @@
 import classNames from 'class-names'
 import React, { PureComponent, ReactNode, RefObject } from 'react'
-import Select, { Async } from 'react-select'
+import Select from 'react-select'
 import { ISelectOption, ISelectState } from '../types'
 import { CheckboxOption } from './checkboxOption'
 import { ArrowRenderer, ClearRenderer, unClearableOptions } from './helpers'
@@ -44,7 +44,7 @@ export class SelectPlugin extends PureComponent<ISelectPluginProps, ISelectState
 
     if (isAsync) {
       return (
-        <Async
+        <Select.Async
           className={classNames(styles.select, {
             [styles.error]: hasError
           })}

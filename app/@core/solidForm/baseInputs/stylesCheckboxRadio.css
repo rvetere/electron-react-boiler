@@ -48,12 +48,7 @@
     bottom: -4px;
     left: -4px;
     content: '';
-
-    @if $THEME == galaxus {
-      border: 2px solid $blackAlpha15;
-    } @else {
-      border: 2px solid $allports2;
-    }
+    border: 2px solid $focusColor;
   }
 }
 

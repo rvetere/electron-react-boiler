@@ -1,0 +1,44 @@
+html,
+body {
+  font-size: 16px; /* stylelint-disable-line */
+  line-height: 1.4;
+
+  @media (min-width: $breakpointMdMin) {
+    font-size: 13px; /* stylelint-disable-line */
+  }
+}
+
+html {
+  box-sizing: border-box;
+  /* stylelint-disable */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  /* stylelint-enable */
+}
+
+body {
+  font-family: $fontFamily;
+  font-weight: $fontWeightNormal;
+
+  @if $THEME == galaxus {
+    letter-spacing: .04em;
+  } @else {
+    letter-spacing: normal;
+  }
+
+  @media (min-width: $breakpointMdMin) {
+    background-color: $iron;
+    line-height: 1.385;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
