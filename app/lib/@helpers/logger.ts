@@ -1,20 +1,24 @@
 // tslint:disable:no-console
 
 class Logger {
-  public log = (msg: string): void => {
-    console.log(msg)
+  // tslint:disable-next-line:no-any
+  public log = (msg: string, ...params: any[]): void => {
+    console.log(msg, ...params)
   }
 
-  public warn = (msg: string): void => {
-    console.warn(msg)
+  // tslint:disable-next-line:no-any
+  public warn = (msg: string, ...params: any[]): void => {
+    console.warn(msg, ...params)
   }
 
-  public info = (msg: string): void => {
-    console.info(msg)
+  // tslint:disable-next-line:no-any
+  public info = (msg: string, ...params: any[]): void => {
+    console.info(msg, ...params)
   }
 
-  public error = (msg: string): void => {
-    console.error(msg)
+  // tslint:disable-next-line:no-any
+  public error = (msg: string, ...params: any[]): void => {
+    console.error(msg, ...params)
   }
 }
 

@@ -1,11 +1,11 @@
 import { getButtonStylings } from '@core'
 import classNames from 'class-names'
 import React, { Children, isValidElement, PureComponent, ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import { Link as ReactLink } from 'react-router-dom'
 import styles from './link.css'
 import { ILinkProps } from './types'
 
-export class LinkComponent extends PureComponent<ILinkProps> {
+export class Link extends PureComponent<ILinkProps> {
   public render(): ReactNode {
     let { children, link, button, inverted, fullSize, text, ...otherProps } = this.props
 
@@ -27,9 +27,9 @@ export class LinkComponent extends PureComponent<ILinkProps> {
     }
 
     return (
-      <Link to={link} className={linkClasses}>
+      <ReactLink to={ReactLink} className={linkClasses}>
         {text}
-      </Link>
+      </ReactLink>
     )
   }
 }

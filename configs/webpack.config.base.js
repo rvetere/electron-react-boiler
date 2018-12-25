@@ -20,6 +20,11 @@ export default {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader'
       }
     ]
   },
@@ -45,6 +50,7 @@ export default {
       '@config': path.resolve(__dirname, '../app/lib/@config'),
       '@constants': path.resolve(__dirname, '../app/lib/@constants'),
       '@decorators': path.resolve(__dirname, '../app/lib/@decorators'),
+      '@graphql': path.resolve(__dirname, '../app/lib/@graphql'),
       '@helpers': path.resolve(__dirname, '../app/lib/@helpers'),
       '@postcss': path.resolve(__dirname, '../app/lib/@postcss')
     }

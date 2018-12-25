@@ -49,6 +49,7 @@ module.exports = api => {
             '@config': './app/lib/@config',
             '@constants': './app/lib/@constants',
             '@decorators': './app/lib/@decorators',
+            '@graphql': './app/lib/@graphql',
             '@helpers': './app/lib/@helpers',
             '@postcss': './app/lib/@postcss'
           }
