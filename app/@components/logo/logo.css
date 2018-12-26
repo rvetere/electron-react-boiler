@@ -1,0 +1,24 @@
+.h1 {
+  position: relative;
+  color: $logoText;
+  text-align: center;
+  padding-bottom: $spacingMedium;
+  margin-bottom: $spacingGrande;
+  margin-top: 0;
+
+  svg {
+    transform: scale(.25);
+    transform-origin: top center;
+  }
+}
+
+.logoContainer {
+  display: block;
+  height: 136px;
+  text-align: center;
+}
+
+.logoTitle {
+  position: relative;
+  z-index: $zIndexMedium;
+}

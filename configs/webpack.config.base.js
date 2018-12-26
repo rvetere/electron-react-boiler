@@ -41,6 +41,7 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
+      '@actions': path.resolve(__dirname, '../app/@actions'),
       '@core': path.resolve(__dirname, '../app/@core'),
       '@pages': path.resolve(__dirname, '../app/@pages'),
       '@components': path.resolve(__dirname, '../app/@components'),

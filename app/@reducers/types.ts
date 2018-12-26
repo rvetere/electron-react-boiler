@@ -1,15 +1,9 @@
-import { Dispatch, Store } from 'redux'
+import { ITokenData } from '@components/withAuth'
 
-export interface ICounterStateType {
-  counter: number
+export interface IAuthState extends ITokenData {
+  token: string
 }
 
-export interface IAction {
-  type: string
+export interface IGlobalState {
+  auth: IAuthState
 }
-
-export type GetState = () => ICounterStateType
-
-export type IDispatch = Dispatch<IAction>
-
-export type IStore = Store<GetState, IAction>

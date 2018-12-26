@@ -7,7 +7,7 @@ import { ILinkProps } from './types'
 
 export class Link extends PureComponent<ILinkProps> {
   public render(): ReactNode {
-    let { children, link, button, inverted, fullSize, text, ...otherProps } = this.props
+    let { children, link, button, inverted, fullSize, ...otherProps } = this.props
 
     const count = Children.count(children)
     const iconPadding = count > 1 && (children && isValidElement(children[0]))
@@ -27,8 +27,8 @@ export class Link extends PureComponent<ILinkProps> {
     }
 
     return (
-      <ReactLink to={ReactLink} className={linkClasses}>
-        {text}
+      <ReactLink to={link} className={linkClasses}>
+        {children}
       </ReactLink>
     )
   }

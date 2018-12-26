@@ -1,5 +1,7 @@
+import { WithAuth } from '@components/withAuth'
 import routes from '@constants/routes.json'
 import { GetWorld } from '@graphql/types/generated'
+import { IAuthState } from '@reducers/types'
 import React, { PureComponent, ReactNode } from 'react'
 import { Query, QueryResult } from 'react-apollo'
 import { Link } from 'react-router-dom'
@@ -10,20 +12,28 @@ export default class Home extends PureComponent<{}> {
   public render(): ReactNode {
     return (
       <div className={styles.container} data-tid="container">
-        <h1>Home</h1>
-        <Link to={routes.STYLEGUIDE}>to Styleguide</Link>
-        <Query query={GET_WORLD}>
-          {({ loading, error, data }: QueryResult<GetWorld.Query, GetWorld.Variables>): ReactNode => {
-            if (loading) {
-              return 'Loading...'
-            }
-            if (error || !data) {
-              return `Error! ${error && error.message}`
-            }
+        <WithAuth>
+          {(auth: IAuthState): ReactNode => (
+            <>
+              <h1>howdy {auth.name}!</h1>
 
-            return <h5>{data.hello}</h5>
-          }}
-        </Query>
+              <Query query={GET_WORLD}>
+                {({ loading, error, data }: QueryResult<GetWorld.Query, GetWorld.Variables>): ReactNode => {
+                  if (loading) {
+                    return 'Loading...'
+                  }
+                  if (error || !data) {
+                    return `Error! ${error && error.message}`
+                  }
+
+                  return <h5>{data.hello}</h5>
+                }}
+              </Query>
+            </>
+          )}
+        </WithAuth>
+
+        <Link to={routes.STYLEGUIDE}>to Styleguide</Link>
       </div>
     )
   }

@@ -1,0 +1,26 @@
+.logoSmall {
+  width: $spacingGrande;
+  height: $spacingGrande;
+
+  svg {
+    transform: scale(.06);
+    transform-origin: top left;
+  }
+}
+
+.nonSticker {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: $spacingSmall;
+}
+
+.sticker {
+  position: absolute;
+  z-index: $zIndexTop;
+  top: -10px;
+  right: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}

@@ -2,7 +2,6 @@ import { IButtonProps } from '@core'
 
 export interface ILinkProps extends IButtonProps {
   link: string
-  text: string
   target?: string
   rel?: string
   button?: boolean

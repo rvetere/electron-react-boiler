@@ -1,0 +1,6 @@
+mutation SIGN_IN($username: String!, $password: String!) {
+  signIn(username: $username, password: $password) {
+    status
+    token
+  }
+}

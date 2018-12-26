@@ -16,6 +16,7 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
+      "@actions/*": ["./app/@actions/*"],
       "@core/*": ["./app/@core/*"],
       "@core": ["./app/@core"],
       "@components/*": ["./app/@components/*"],

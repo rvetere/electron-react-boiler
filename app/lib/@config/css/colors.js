@@ -90,5 +90,11 @@ module.exports = {
 
   scorpion9: `rgba(86, 86, 86, .9)`,
 
+  logoText: 'rgba(122, 122, 122, .95)',
+  logoBg1: 'rgba(232, 209, 60, 1)',
+  logoBg2: 'rgba(255, 211, 7, 1)',
+  logoFg1: 'rgba(88, 88, 88, .75)',
+  logoFg2: 'rgba(0, 0, 0, .75)',
+
   transparent: 'transparent'
 }

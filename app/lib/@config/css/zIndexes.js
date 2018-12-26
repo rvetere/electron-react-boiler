@@ -1,4 +1,10 @@
 module.exports = {
+  below: -1,
+  base: 1,
+  medium: 2,
+  high: 3,
+  top: 4,
+
   negative: -1,
   orderSearch: 1,
   select: 1,

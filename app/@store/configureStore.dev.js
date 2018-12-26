@@ -3,8 +3,8 @@ import thunk from 'redux-thunk'
 import { createHashHistory } from 'history'
 import { routerMiddleware, routerActions } from 'connected-react-router'
 import { createLogger } from 'redux-logger'
-import createRootReducer from '../@reducers'
-// import * as counterActions from '../actions/counter';
+import createRootReducer from '@reducers'
+import * as authActions from '@actions/auth'
 
 const history = createHashHistory()
 
@@ -35,7 +35,7 @@ const configureStore = initialState => {
 
   // Redux DevTools Configuration
   const actionCreators = {
-    // ...counterActions,
+    ...authActions,
     ...routerActions
   }
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose

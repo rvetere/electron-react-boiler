@@ -283,6 +283,7 @@
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "history": "^4.7.2",
+    "jsonwebtoken": "^8.4.0",
     "react": "^16.6.3",
     "react-apollo": "^2.3.3",
     "react-dom": "^16.6.3",
@@ -293,7 +294,8 @@
     "react-select": "1.2.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "source-map-support": "^0.5.9"
+    "source-map-support": "^0.5.9",
+    "typesafe-actions": "^2.0.4"
   },
   "devEngines": {
     "node": ">=7.x",

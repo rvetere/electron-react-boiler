@@ -13,6 +13,7 @@ import eye from './components/Eye'
 import eyeClosed from './components/EyeClosed'
 import radio from './components/Radio'
 import radioActive from './components/RadioActive'
+import stackbee from './components/Stackbee'
 
 import styles from './styles.css'
 
@@ -34,3 +35,4 @@ export const Eye: React.SFC<IIconProps> = (props: IIconProps): JsxOrNull => wrap
 export const EyeClosed: React.SFC<IIconProps> = (props: IIconProps): JsxOrNull => wrapIcon(eyeClosed, props)
 export const Radio: React.SFC<IIconProps> = (props: IIconProps): JsxOrNull => wrapIcon(radio, props)
 export const RadioActive: React.SFC<IIconProps> = (props: IIconProps): JsxOrNull => wrapIcon(radioActive, props)
+export const Stackbee: React.SFC<IIconProps> = (props: IIconProps): JsxOrNull => wrapIcon(stackbee, props)

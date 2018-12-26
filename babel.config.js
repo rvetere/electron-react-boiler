@@ -40,6 +40,7 @@ module.exports = api => {
           root: ['.'],
           cwd: 'babelrc',
           alias: {
+            '@actions': './app/@actions',
             '@core': './app/@core',
             '@pages': './app/@pages',
             '@components': './app/@components',

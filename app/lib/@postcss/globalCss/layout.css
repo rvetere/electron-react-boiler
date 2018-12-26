@@ -18,19 +18,20 @@ html {
 }
 
 body {
-  font-family: $fontFamily;
+  /* font-family: $fontFamily; */
+  overflow: hidden;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; /* stylelint-disable-line */
   font-weight: $fontWeightNormal;
-
-  @if $THEME == galaxus {
-    letter-spacing: .04em;
-  } @else {
-    letter-spacing: normal;
-  }
+  letter-spacing: normal;
+  background-color: $scorpion;
 
   @media (min-width: $breakpointMdMin) {
-    background-color: $iron;
     line-height: 1.385;
   }
+}
+
+#root {
+  height: 100%;
 }
 
 *,
