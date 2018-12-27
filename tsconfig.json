@@ -29,7 +29,8 @@
       "@decorators/*": ["./app/lib/@decorators/*"],
       "@graphql/*": ["./app/lib/@graphql/*"],
       "@helpers/*": ["./app/lib/@helpers/*"],
-      "@postcss/*": ["./app/lib/@postcss/*"]
+      "@postcss/*": ["./app/lib/@postcss/*"],
+      "@webpack/*": ["./app/lib/@webpack/*"]
     },
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016", "es2017", "esnext.asynciterable"],

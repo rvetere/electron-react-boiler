@@ -12,7 +12,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(?:js|ts|tsx)?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -52,7 +52,8 @@ export default {
       '@decorators': path.resolve(__dirname, '../app/lib/@decorators'),
       '@graphql': path.resolve(__dirname, '../app/lib/@graphql'),
       '@helpers': path.resolve(__dirname, '../app/lib/@helpers'),
-      '@postcss': path.resolve(__dirname, '../app/lib/@postcss')
+      '@postcss': path.resolve(__dirname, '../app/lib/@postcss'),
+      '@webpack': path.resolve(__dirname, '../app/lib/@webpack')
     }
   },
 
