@@ -2,15 +2,16 @@
  * Webpack config for production electron main process
  */
 
-import path from 'path';
-import webpack from 'webpack';
-import merge from 'webpack-merge';
-import TerserPlugin from 'terser-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import baseConfig from './webpack.config.base';
-import CheckNodeEnv from '../internals/scripts/CheckNodeEnv';
+import path from 'path'
+import webpack from 'webpack'
+import merge from 'webpack-merge'
+import TerserPlugin from 'terser-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import baseConfig from './webpack.config.base'
+import CheckNodeEnv from '../internals/scripts/CheckNodeEnv'
+import I18nProdPlugin from '@webpack/i18n/prodPlugin'
 
-CheckNodeEnv('production');
+CheckNodeEnv('production')
 
 export default merge.smart(baseConfig, {
   devtool: 'source-map',
@@ -40,8 +41,7 @@ export default merge.smart(baseConfig, {
 
   plugins: [
     new BundleAnalyzerPlugin({
-      analyzerMode:
-        process.env.OPEN_ANALYZER === 'true' ? 'server' : 'disabled',
+      analyzerMode: process.env.OPEN_ANALYZER === 'true' ? 'server' : 'disabled',
       openAnalyzer: process.env.OPEN_ANALYZER === 'true'
     }),
 
@@ -58,7 +58,8 @@ export default merge.smart(baseConfig, {
       NODE_ENV: 'production',
       DEBUG_PROD: false,
       START_MINIMIZED: false
-    })
+    }),
+    new I18nProdPlugin()
   ],
 
   /**
@@ -70,4 +71,4 @@ export default merge.smart(baseConfig, {
     __dirname: false,
     __filename: false
   }
-});
+})
