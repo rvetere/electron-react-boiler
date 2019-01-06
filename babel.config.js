@@ -52,7 +52,8 @@ module.exports = api => {
             '@decorators': './app/lib/@decorators',
             '@graphql': './app/lib/@graphql',
             '@helpers': './app/lib/@helpers',
-            '@postcss': './app/lib/@postcss'
+            '@postcss': './app/lib/@postcss',
+            '@webpack': './app/lib/@webpack'
           }
         }
       ],

@@ -5,5 +5,6 @@ export interface IAuthState extends ITokenData {
 }
 
 export interface IGlobalState {
+  lang: string
   auth: IAuthState
 }

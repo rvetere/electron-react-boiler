@@ -4,6 +4,7 @@ const atImport = require('postcss-import')
 const forLoop = require('postcss-for')
 const mixins = require('postcss-mixins')
 const conditionals = require('postcss-conditionals')
+const colorFunction = require('postcss-color-function')
 const vars = require('postcss-simple-vars')
 const functions = require('postcss-functions')
 const cssNested = require('postcss-nested')
@@ -21,6 +22,7 @@ const plugins = [
   vars({
     variables: () => variables
   }),
+  colorFunction(),
   functions({
     glob: path.join(process.cwd(), 'app', 'lib', '@postcss', 'functions', '*.js')
   }),

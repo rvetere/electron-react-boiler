@@ -5,11 +5,6 @@
   padding-bottom: $spacingMedium;
   margin-bottom: $spacingGrande;
   margin-top: 0;
-
-  svg {
-    transform: scale(.25);
-    transform-origin: top center;
-  }
 }
 
 .logoContainer {

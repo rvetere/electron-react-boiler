@@ -1,15 +1,14 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import LANGUAGES from '@constants/language'
 import Root from './@pages/_root'
 import { configureStore, history } from '@store/configureStore'
 import { verifyToken } from '@components/withAuth'
 import './app.global.css'
 import { signIn } from '@actions/auth'
 
-const store = configureStore({
-  auth: null
-})
+const store = configureStore({})
 
 render(
   <AppContainer>

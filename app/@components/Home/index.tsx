@@ -16,6 +16,7 @@ export default class Home extends PureComponent<{}> {
           {(auth: IAuthState): ReactNode => (
             <>
               <h1>howdy {auth.name}!</h1>
+              {__('hello')}
 
               <Query query={GET_WORLD}>
                 {({ loading, error, data }: QueryResult<GetWorld.Query, GetWorld.Variables>): ReactNode => {

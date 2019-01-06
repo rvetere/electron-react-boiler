@@ -46,7 +46,8 @@ export default merge.smart(baseConfig, {
             options: {
               sourceMap: true
             }
-          }
+          },
+          'postcss-loader'
         ]
       },
       // Pipe other styles through css modules and append to style.css
@@ -63,7 +64,8 @@ export default merge.smart(baseConfig, {
               localIdentName: '[name]__[local]__[hash:base64:5]',
               sourceMap: true
             }
-          }
+          },
+          'postcss-loader'
         ]
       },
       // Add SASS support  - compile all .global.scss files and pipe it to style.css
@@ -80,6 +82,7 @@ export default merge.smart(baseConfig, {
               importLoaders: 1
             }
           },
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -104,6 +107,7 @@ export default merge.smart(baseConfig, {
               sourceMap: true
             }
           },
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {

@@ -1,7 +1,9 @@
 .footer {
   position: fixed;
+  z-index: $zIndexTop;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 38px;
+  background-image: linear-gradient($scorpion, color($scorpion shade(10%)));
 }

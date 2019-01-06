@@ -1,9 +1,10 @@
 .navigation {
   position: fixed;
   z-index: $zIndexTooltipChevron;
-  top: $spacingBig;
+  top: 28px;
   left: 0;
   width: 100%;
+  height: $spacingBig;
   background: rgba(33, 33, 33, .85);
 }
 

@@ -38,8 +38,8 @@
 
 .styleguide {
   height: auto;
-  border: $spacingBig solid $dustyGray;
   background: $white;
+  padding-top: $spacingBig;
 }
 
 .content {

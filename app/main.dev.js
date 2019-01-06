@@ -31,12 +31,20 @@ if (process.env.NODE_ENV === 'production') {
 
 if (process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true') {
   require('electron-debug')()
+  try {
+    const I18nWatcher = require('./lib/@webpack/i18n/watcher')
+    const i18nWatcher = new I18nWatcher()
+    i18nWatcher.start()
+  } catch (e) {
+    // ignore
+    console.log('I18nWatcher', e)
+  }
 }
 
 const installExtensions = async () => {
   const installer = require('electron-devtools-installer')
   const forceDownload = !!process.env.UPGRADE_EXTENSIONS
-  const extensions = ['REACT_DEVELOPER_TOOLS', 'REDUX_DEVTOOLS']
+  const extensions = ['REACT_DEVELOPER_TOOLS', 'REDUX_DEVTOOLS', 'APOLLO_DEVELOPER_TOOLS']
 
   return Promise.all(extensions.map(name => installer.default(installer[name], forceDownload))).catch(console.log)
 }
@@ -58,21 +66,29 @@ app.on('ready', async () => {
     await installExtensions()
   }
 
-  mainWindow = new BrowserWindow({
+  let windowOptions = {
     show: false,
     width: 1024,
     height: 728,
     minHeight: 600,
     minWidth: 550,
-    titleBarStyle: 'hidden',
-    frame: false
-  })
+    backgroundColor: '#565656'
+  }
+
+  if (process.platform === 'darwin') {
+    windowOptions = {
+      ...windowOptions,
+      titleBarStyle: 'hidden',
+      frame: false
+    }
+  }
+
+  mainWindow = new BrowserWindow(windowOptions)
 
   mainWindow.loadURL(`file://${__dirname}/app.html`)
 
-  // @TODO: Use 'ready-to-show' event
-  //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
-  mainWindow.webContents.on('did-finish-load', () => {
+  // Don't show until we are ready and loaded
+  mainWindow.once('ready-to-show', () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined')
     }

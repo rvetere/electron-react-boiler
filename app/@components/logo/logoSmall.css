@@ -1,11 +1,6 @@
 .logoSmall {
   width: $spacingGrande;
   height: $spacingGrande;
-
-  svg {
-    transform: scale(.06);
-    transform-origin: top left;
-  }
 }
 
 .nonSticker {
@@ -19,8 +14,8 @@
 .sticker {
   position: absolute;
   z-index: $zIndexTop;
-  top: -10px;
-  right: 10px;
+  right: 5px;
+  bottom: 7px;
   overflow: hidden;
   cursor: pointer;
 }
