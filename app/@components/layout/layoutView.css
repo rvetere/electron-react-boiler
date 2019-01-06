@@ -1,8 +1,12 @@
 .layout {
   position: relative;
   height: 100%;
-  padding: $spacingBig 0 0;
+  padding: 0;
   color: $lightGray;
+}
+
+.darwin {
+  padding: $spacingBig 0 0;
 }
 
 .content {
